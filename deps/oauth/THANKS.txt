@@ -1,0 +1,25 @@
+Thanks to the following for patches and suggestions:
+
+* András Veres-Szentkirályi <github.com/dnet>
+
+* Дамјан Георгиевски <github.com/gdamjan>
+
+* Benoit Chesneau <github.com/benoitc>
+
+* Fernando Benavides <github.com/elbrujohalcon>
+
+* Jan Lehnardt <github.com/janl>
+
+* Jason Davies <github.com/jasondavies>
+
+* Jebu Ittiachen <github.com/jebu>
+
+* Paul Bonser <github.com/pib>
+
+* Roberto Aloi <github.com/prof3ta>
+
+* Ryan Flynn <github.com/rflynn>
+
+* naoya_t <github.com/naoyat>
+
+* narugami <github.com/narugami>

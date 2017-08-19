@@ -1,0 +1,9 @@
+{application, avz,
+ [
+  {description, "AVZ VXZ Token System"},
+  {vsn, "2.9"},
+  {registered, []},
+  {applications, [kernel, stdlib]},
+  {mod, { avz_app, []}},
+  {env, []}
+ ]}.

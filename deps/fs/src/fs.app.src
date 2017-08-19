@@ -1,0 +1,7 @@
+{application, fs,
+ [{description, "FS VXZ Listener"},
+  {vsn, "1.9"},
+  {registered, []},
+  {applications, [kernel,stdlib]},
+  {mod, { fs_app, []}},
+  {env, []}]}.
