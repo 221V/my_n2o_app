@@ -10,8 +10,8 @@
 
 main() ->
  avz:callbacks(?LOGIN),
- #dtl{file="dev",app=review,bindings=[{title,<<"Login">>},{body,body()},{folders,folders()}]}.
-folders() -> string:join([filename:basename(F)||F<-filelib:wildcard(code:priv_dir(review)++"/snippets/*/")],",").
+ #dtl{file="dev",app=my_n2o_app,bindings=[{title,<<"Login">>},{body,body()},{folders,folders()}]}.
+folders() -> string:join([filename:basename(F)||F<-filelib:wildcard(code:priv_dir(my_n2o_app)++"/snippets/*/")],",").
 
 body() ->
   header() ++

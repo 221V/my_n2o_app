@@ -1,0 +1,9 @@
+{application, my_n2o_app,
+ [
+  {description, "N2O Simple Sample Application"},
+  {vsn, "2.9"},
+  {registered, []},
+  {applications, [kernel, stdlib, n2o, kvs]},
+  {mod, { my_n2o_app, []}},
+  {env, []}
+ ]}.

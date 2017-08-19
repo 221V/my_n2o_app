@@ -4,7 +4,7 @@
 -include_lib("nitro/include/nitro.hrl").
 -include_lib("n2o/include/wf.hrl").
 
-main() -> #dtl{file="doc",app=review,bindings=[{body,body()}]}.
+main() -> #dtl{file="doc",app=my_n2o_app,bindings=[{body,body()}]}.
 
 body() -> case wf:user() of
                undefined -> wf:user("anonymous");

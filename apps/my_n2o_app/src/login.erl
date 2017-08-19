@@ -4,8 +4,8 @@
 -include_lib("nitro/include/nitro.hrl").
 -include_lib("n2o/include/wf.hrl").
 
-main() -> #dtl{file="login",app=review,bindings=[{body,body()},{folders,folders()}]}.
-folders() -> string:join([filename:basename(F)||F<-filelib:wildcard(code:priv_dir(review)++"/snippets/*/")],",").
+main() -> #dtl{file="login",app=my_n2o_app,bindings=[{body,body()},{folders,folders()}]}.
+folders() -> string:join([filename:basename(F)||F<-filelib:wildcard(code:priv_dir(my_n2o_app)++"/snippets/*/")],",").
 
 body() ->
  [ #span   { id=display },                #br{},

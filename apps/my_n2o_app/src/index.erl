@@ -7,9 +7,9 @@
 main() ->
     case wf:user() of
          undefined -> wf:redirect("login.htm"), redirect_wait();
-         _ -> #dtl{file = "index", app=review,bindings=[{body,body()},{list,list()},{javascript,(?MODULE:(wf:config(n2o,mode,dev)))()}]} end.
+         _ -> #dtl{file = "index", app=my_n2o_app,bindings=[{body,body()},{list,list()},{javascript,(?MODULE:(wf:config(n2o,mode,dev)))()}]} end.
 
-prod() ->   [ #script{src="/static/review.min.js"} ].
+prod() ->   [ #script{src="/static/my_n2o_app.min.js"} ].
 dev()  -> [ [ #script{src=lists:concat(["/n2o/protocols/",X,".js"])} || X <- [bert,nitrogen] ],
             [ #script{src=lists:concat(["/n2o/",Y,".js"])}           || Y <- [bullet,n2o,ftp,utf8,validation] ] ].
 
@@ -49,7 +49,7 @@ event(#client{data={User,Message}}) ->
     wf:wire(#jq{target=message,method=[focus,select]}),
     HTML = wf:to_list(Message),
     wf:info(?MODULE,"HTML: ~tp~n",[HTML]),
-    DTL = #dtl{file="message",app=review,bindings=[{user,User},{color,"gray"},{message,HTML}]},
+    DTL = #dtl{file="message",app=my_n2o_app,bindings=[{user,User},{color,"gray"},{message,HTML}]},
     wf:insert_top(history, wf:jse(wf:render(DTL)));
 
 event(#bin{data=Data}) ->
@@ -68,6 +68,6 @@ event(Event) ->
     ok.
 
 loop(M) ->
-    DTL = #dtl{file="message",app=review,bindings=[{user,"system"},{message,M},{color,"silver"}]},
+    DTL = #dtl{file="message",app=my_n2o_app,bindings=[{user,"system"},{message,M},{color,"silver"}]},
     wf:insert_top(history, wf:jse(wf:render(DTL))),
     wf:flush().
