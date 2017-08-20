@@ -20,6 +20,7 @@ route_prefix(<<"/",P/binary>>) -> route(P);
 route_prefix(P) -> route(P).
 
 route(<<>>)              -> login;
+route(<<"testcities/">>) -> testcities;
 route(<<"counter",_/binary>>) -> counter;
 route(<<"chat",_/binary>>) -> chat;
 route(<<"doc",_/binary>>) -> doc;

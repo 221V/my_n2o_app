@@ -1,5 +1,5 @@
 -module(index).
--compile(export_all).
+-compile([export_all, nowarn_export_all]).
 -include_lib("kvs/include/entry.hrl").
 -include_lib("nitro/include/nitro.hrl").
 -include_lib("n2o/include/wf.hrl").
