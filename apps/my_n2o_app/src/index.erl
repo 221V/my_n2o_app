@@ -24,6 +24,9 @@ body() ->
     [ #span{id=upload},#button { id=send, body= <<"Chat">>, postback=chat, source=[message] } ].
 
 event(init) ->
+    %wf:config(n2o,appurl,undefined) %App,Key,DefaulValue
+    io:format("~p~n",[wf:config(n2o,appurl,undefined)]),
+    
     Room = code(),
     wf:update(upload,#upload{id=upload}),
     wf:reg(n2o_session:session_id()),
